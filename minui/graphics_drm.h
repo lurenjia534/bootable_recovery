@@ -59,8 +59,8 @@ class MinuiBackendDrm : public MinuiBackend {
   GRSurface* Init() override;
   GRSurface* Flip() override;
   void Blank(bool) override;
-  void Blank(bool blank, DrmConnector index) override;
-  bool HasMultipleConnectors() override;
+  void Blank(bool blank, DrmConnector index) ;
+  bool HasMultipleConnectors() ;
 
  private:
   void DrmDisableCrtc(int drm_fd, drmModeCrtc* crtc);
